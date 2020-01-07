@@ -53,6 +53,6 @@ steps:
     
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.SourcesDirectory)\Gpr\bin\DesktopGL\$(buildPlatformDirectory)\$(buildConfiguration)\'
+    PathtoPublish: '$(Build.SourcesDirectory)\src\Gpr\bin\DesktopGL\$(buildPlatformDirectory)\$(buildConfiguration)\'
     ArtifactName: 'drop'
     publishLocation: 'Container'
