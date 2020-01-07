@@ -11,7 +11,8 @@ pool:
 
 variables:
   solution: '**/*.sln'
-  buildPlatform: 'AnyCPU'
+  buildPlatform: 'Any CPU'
+  buildPlatformDirectory: 'AnyCPU'
   buildConfiguration: 'Release'
   monoGameVersion: 'v3.7.1' 
 
@@ -52,6 +53,6 @@ steps:
     
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.SourcesDirectory)\Gpr\bin\DesktopGL\$(buildPlatform)\$(buildConfiguration)\'
+    PathtoPublish: '$(Build.SourcesDirectory)\Gpr\bin\DesktopGL\$(buildPlatformDirectory)\$(buildConfiguration)\'
     ArtifactName: 'drop'
     publishLocation: 'Container'
